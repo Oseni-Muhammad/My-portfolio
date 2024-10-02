@@ -42,10 +42,12 @@ header {
     display: flex;
     gap: 30px;
     /* Reduced spacing to fit smaller width */
+    align-items: center;
 }
 
 .nav-links li {
     display: inline;
+     text-align:center;
 }
 
 .nav-links a {
@@ -69,6 +71,11 @@ a {
     color: initial;
     color: #0a66c2;
     flex-direction: row;
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
 }
 
 .fa-brands {
@@ -130,6 +137,8 @@ a {
 }
 
 .intro-content h1 {
+    text-align: left;
+    /* Header text color */
     font-size: 3em;
     color: #F1B24A;
     /* Brand Yellow */
@@ -203,7 +212,7 @@ a {
     padding: 60px 20px;
 }
 
-h1 {
+.case-study-container>h1 {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 10px;
@@ -357,9 +366,9 @@ green3 {
 
 /* Case studies section */
 /* Testimonial section */
-.container {
+.testimonials-container {
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 0 auto 1rem;
     padding: 60px 20px;
 }
 
@@ -434,7 +443,7 @@ h1 {
 
 /* testimonial section */
 /* Recentwork section */
-.container {
+.recentwork-container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 40px 20px;
@@ -543,7 +552,7 @@ h1 {
     background-color: #121212;
 }
 
-.container {
+.getintouch-container {
     text-align: center;
     background-color: #1C1C1C;
     padding: 40px;
