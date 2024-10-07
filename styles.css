@@ -32,7 +32,7 @@ header {
 /* Navigation container inside the header */
 .top-nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
 }
 
@@ -47,7 +47,7 @@ header {
 
 .nav-links li {
     display: inline;
-     text-align:center;
+    text-align: center;
 }
 
 .nav-links a {
@@ -66,29 +66,34 @@ header {
 }
 
 /* Social Icons */
-a {
-    display: flex;
-    color: initial;
-    color: #0a66c2;
-    flex-direction: row;
-}
-
 .social-icons {
     display: flex;
-    gap: 1rem;
-}
-
-.fa-brands {
-    display: flex;
-    gap: 20px;
     flex-direction: row;
+    gap: 1rem;
+
 }
 
-.fa-brands:hover {
+a {
+    color: initial;
+    justify-content: right;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+a.fa-linkedin:hover {
     opacity: 1;
 }
 
-.fa-brands fa-linkedin {
+a.fa-behance:hover {
+    opacity: 1;
+}
+
+a.fa-twitter:hover {
+    opacity: 1;
+}
+
+a.fa-linkedin {
     display: flex;
     width: 24px;
     height: 24px;
@@ -97,7 +102,7 @@ a {
     color: #0a66c2
 }
 
-.fa-brands fa-behance {
+a.fa-behance {
     display: flex;
     width: 24px;
     height: 24px;
@@ -106,7 +111,7 @@ a {
     color: #0057ff;
 }
 
-.fa-brands fa-twitter {
+a.fa-twitter {
     display: flex;
     width: 24px;
     height: 24px;
@@ -114,13 +119,6 @@ a {
     transition: opacity 0.3s ease;
     color: #0057ff;
 }
-
-
-
-
-
-
-
 
 /* Intro Section */
 .intro-section {
@@ -228,70 +226,33 @@ a {
 }
 
 .case-studies-grid {
-    display: grid;
+    display: flex;
+    flex-direction: column;
     grid-template-columns: 1fr;
     gap: 30px;
 }
 
 .case-study1 {
     display: flex;
+
     background-color: #1e1e1e;
     /* Slightly lighter dark for the card background */
-    border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.case-study2 {
-    display: flex;
-    background-color: #1e1e1e;
-    /* Slightly lighter dark for the card background */
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
 
-.case-study2 {
-    display: flex;
-    background-color: #1e1e1e;
-    /* Slightly lighter dark for the card background */
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
 
 .case-study1:nth-child(even) {
     flex-direction: row-reverse;
 }
 
-.case-study2:nth-child(even) {
-    flex-direction: row-reverse;
-}
-
-.case-study3:nth-child(even) {
-    flex-direction: row-reverse;
-}
 
 .case-study-content1 {
+    display: flex;
     flex: 1;
     padding: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
 
-.case-study-content2 {
-    flex: 1;
-    padding: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.case-study-content3 {
-    flex: 1;
-    padding: 30px;
-    display: flex;
     flex-direction: column;
     justify-content: center;
 }
@@ -300,17 +261,9 @@ a {
     flex: 1;
     min-height: 300px;
     background-size: cover;
-    background-position: center;
-    background-image: url('/api/placeholder/600/400')
+    background-position: right;
 }
 
-.case-study-image2 {
-    flex: 1;
-    min-height: 300px;
-    background-size: cover;
-    background-position: center;
-    background-image: url('/api/placeholder/600/400')
-}
 
 
 .case-study-title1 {
@@ -320,12 +273,6 @@ a {
     /* Title text color */
 }
 
-.case-study-title2 {
-    font-size: 1.5rem;
-    margin-bottom: 15px;
-    color: #E0E0E0;
-    /* Title text color */
-}
 
 .case-study-description1 {
     margin-bottom: 20px;
@@ -333,36 +280,32 @@ a {
     /* Lighter text for description */
 }
 
-.case-study-description2 {
-    margin-bottom: 20px;
-    color: #aaaaaa;
-    /* Lighter text for description */
-}
 
 
 .view-case-study {
-    display: inline-block;
-    padding: 10px 20px;
+    display: flex;
+    padding: 10px 10px;
     border-radius: 5px;
     text-decoration: none;
     font-weight: bold;
     transition: background-color 0.3s;
     color: #121212;
+    max-width: fit-content;
 }
 
-.view-case-study.green1,
-green2,
-green3 {
-    background-color: #3ABBAF;
+.view-case-study.green1:hover {
+    background-color: blue;
+    /* Secondary hover green */
+}
+
+.view-case-study.green1 {
+    background-color: red;
     /* Primary highlight green */
-    color: #121212;
+    color: white;
     /* Contrast text color */
 }
 
-.view-case-study.green:hover {
-    background-color: #34A89A;
-    /* Secondary hover green */
-}
+
 
 /* Case studies section */
 /* Testimonial section */
@@ -554,12 +497,12 @@ h1 {
 
 .getintouch-container {
     text-align: center;
-    background-color: #1C1C1C;
+
     padding: 40px;
-    border-radius: 20px;
+    border: none;
     max-width: 500px;
     width: 100%;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+
 }
 
 h1 {
